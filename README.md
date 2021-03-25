@@ -1,3 +1,6 @@
-# aws-infra-as-code
-aws-infra-as-code
-Nanodegree
+# AWS IaC
+
+- VPC
+- Servers
+- Database
+- Security Groups
