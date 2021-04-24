@@ -66,7 +66,6 @@ Resources:
         - Ref: WebServerSecGroup
       ImageId: ami-02701bcdc5509e57b
       InstanceType: t2.medium
-      KeyName: bastion
       BlockDeviceMappings:
       - DeviceName: "/dev/sdk"
         Ebs:
@@ -87,7 +86,7 @@ Resources:
     Properties:
       VPCZoneIdentifier:
       - Fn::ImportValue: 
-          !Sub "${VPCEnvironmentName}-PUB-NETS"
+          !Sub "${VPCEnvironmentName}-PRIV-NETS"
       LaunchConfigurationName:
         Ref: WebAppLaunchConfig
       MinSize: '4'
